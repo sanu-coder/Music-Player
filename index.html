@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/e30368ac79.js" crossorigin="anonymous"></script>
+
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
+    <!-- jquery -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="music-container">
+            <!-- =========top icons==============--->
+            <div class="icons">
+                <button onclick="open_p()"><i class="fas fa-bars"></i></button>
+                <h1> MUSIC PLAYER</h1>
+                <!-- <a href="#" class="1"><i class="far fa-heart" onclick="like()"></i></a> -->
+                <button onclick="like()"><i class="far fa-heart" ></i></button>
+            </div>
+            <!-- ==========song headings ==============-->
+            <h2 id="song-name">Garmi</h2>
+            <h3 id="artist-name">Neha kakkar,Badshah</h3>
+            <!-- ===========image and audio ============-->
+            <div class="img-container">
+                <img src="img/garmi.jpg" alt="">
+            </div>
+            <audio src="Audio files/garmi.mp3"></audio>
+            <!--=========== time=============== -->
+            <div class="time">
+                <span class="forward-time">0:00</span>
+                <span class="backward-time">0:00</span>
+            </div>
+            <!--=========== seek bar =============== -->
+            <div class="seek">
+                <div class="fill"></div>
+            </div>
+            <!-- ============control btns={==}=={==}===== -->
+            <div class="audio-btns">
+                <div class="but">
+                    <div class="control-buttons">
+                        <i class="fas fa-step-backward" onclick="prevsong()" id="prev"></i>
+                        <i class="fas fa-play play-btn" onclick="buttonclick()" id="play" title="play"></i>
+                        <i class="fas fa-step-forward" onclick="nextsong()" id="next"></i>
+                    </div>
+                </div>
+
+                <div class="repeat-buttons">
+                    <button onclick="re_start()"><i class="fas fa-retweet" ></i></button>
+                    <span>
+                        <button class="decrease" onclick="decrease_volume()"><i class="fas fa-minus"></i></button>
+                        <button class="voloume-up" onclick="zero_volume()"><i class="fas fa-volume-up"></i></button>
+                        <button class="increase" onclick="increase_volume()"><i class="fas fa-plus"></i></button>
+                    </span>
+                    <button onclick="random_song()"><i class="fas fa-random" ></i></button>
+                    <button><a  href="Audio files/garmi.mp3" onclick="download_song()" download=""><i class="fas fa-download"></i></a></button>
+                </div>
+            </div>
+            <!-- playlist -->
+            <div id="p1" class="playlist ">
+                <div class="p_song active_song one" id="1" onclick="clicked_button(this.id)">
+                    <p id="p_title">Garmi</p>
+                    <p id="p_artist">Neha kakkar, Badshah</p>
+                </div>
+                <div class="p_song two" id="2" onclick="clicked_button(this.id)">
+                    <p id="p_title">Lagdi Lahore Di</p>
+                    <p id="p_artist">Sachin, Jigar</p>
+                </div>
+                <div class="p_song three" id="3" onclick="clicked_button(this.id)">
+                    <p id="p_title">Nazm-Nazm</p>
+                    <p id="p_artist">xyz</p>
+                </div>
+                <div class="p_song four" id="4" onclick="clicked_button(this.id)">
+                    <p id="p_title">Gaj Ka Daman</p>
+                    <p id="p_artist">Pranjal Dahiya</p>
+                    <button><i class="fas fa-play "></i></button>
+                </div>
+                <div class="p_song four" id="4" onclick="clicked_button(this.id)">
+                    <p id="p_title">Chhor Denge</p>
+                    <p id="p_artist">Parampara Tandon,Sachet-Parampara</p>
+                    <button><i class="fas fa-play "></i></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+
+</html>
